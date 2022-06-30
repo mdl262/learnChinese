@@ -12,22 +12,30 @@ let timeout;
 
 function fetchTranslation() {
 
+    resize()
+
     clearTimeout(timeout)
 
     timeout = setTimeout(async function () {
-        text = document.querySelector("textarea").value;
+        text = document.querySelector("#input").innerHTML
         console.log("try")
         controller.abort()
         controller = new AbortController();
-        response = fetch(genQuery(text), {
-            signal: controller.signal
-        })
-            .then(response => response.json())
-            .then(data => interpret(data))
-            .catch(error => {
-                document.getElementById('translation').innerHTML = "" // handle the error
-            });
-        console.log("sent fetch")
+
+        if (text == "") {
+            document.getElementById('translation').innerHTML = ""
+        } else {
+            response = fetch(genQuery(text), {
+                signal: controller.signal
+            })
+                .then(response => response.json())
+                .then(data => interpret(data))
+                .catch(error => {
+                    document.getElementById('translation').innerHTML = "" // handle the error
+                });
+            console.log("sent fetch")
+        }
+
     }, queryInterval);
 
 

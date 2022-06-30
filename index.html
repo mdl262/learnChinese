@@ -51,12 +51,14 @@
     <meta name="msapplication-TileColor" content="#222222">
 </head>
 <body>
-    <script src="js/main.js"></script>
     <section>
         <h1>learnChinese</h1>
         <h2>A simple language learning tool for English speakers learning Mandarin.</h2>
-        <textarea placeholder="Type Chinese" onkeyup="fetchTranslation()"></textarea>
+        <p contenteditable="true" id="input" placeholder="Type Chinese" onkeyup="fetchTranslation()"></p>
         <p id="translation"></p>
+        <span></span>
     </section>
+    <script src="js/main.js"></script>
+    <script src="js/resize.js"></script>
 </body>
 </html>

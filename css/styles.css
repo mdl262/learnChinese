@@ -8,7 +8,7 @@ body {
 
 section {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     height: 100%;
     width: 100%;
     position: fixed;
@@ -21,25 +21,57 @@ h1 {
     margin: 0;
 }
 
-textarea {
+span {
+    visibility: hidden;
+    position: absolute;
+    pointer-events: none;
+    inset: 0;
+    width: max-content !important;
+    height: fit-content !important;
+}
+
+#input, span {
     font-family: Hanzi-Pinyin-Font !important;
     font-size: 8rem;
-    resize: none;
+    line-height: normal;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+#input {
+    display: inline-flex;
+    position: relative;
+    align-items: center;
     height: 11rem;
     width: 100%;
     white-space: nowrap;
-    line-height: 10rem;
     overflow-y: clip;
     background: #7777;
-    border-color: #004e8c;
+    border-color: transparent;
     border-radius: 1rem;
     border-width: 3px;
-    padding-left: 10px;
-    padding-right: 10px;
     margin-bottom: 10px !important;
 }
+    #input:focus-visible, #input:focus-within {
+        border-color: #004e8c;
+        outline: none;
+    }
 
-p {
+    #input:empty:before {
+        content: attr(placeholder);
+        opacity: 0.6;
+        height: 100%;
+        position: absolute;
+        display: inline-grid;
+        align-items: center;
+        inset: 0;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+
+p#translation {
     width: 100%;
     color: #004e8c;
 }
@@ -53,13 +85,14 @@ p {
         font-size: 17pt;
     }
 
-    textarea {
+    #input, span {
         font-size: 10vw;
         height: 15vw;
         line-height: normal;
         width: calc(100% - 60px);
     }
-    p {
+
+    p#translation {
         font-size: 8vw;
         line-height: normal;
         height: 8vw;
@@ -76,9 +109,9 @@ p {
     h1, h2 {
         display: none;
     }
-    textarea {
+    #input, span {
         height: 50%;
-        line-height: 100%;
+        line-height: normal;
         text-size-adjust: auto;
         overflow: hidden;
     }
