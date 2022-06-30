@@ -17,7 +17,7 @@ function fetchTranslation() {
     clearTimeout(timeout)
 
     timeout = setTimeout(async function () {
-        text = document.querySelector("#input").innerHTML
+        text = document.querySelector("#input").innerText
         console.log("try")
         controller.abort()
         controller = new AbortController();
