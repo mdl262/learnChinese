@@ -22,7 +22,7 @@ h1 {
 }
 
 textarea {
-    font-family: Hanzi-Pinyin-Font;
+    font-family: Hanzi-Pinyin-Font !important;
     font-size: 8rem;
     resize: none;
     height: 11rem;
