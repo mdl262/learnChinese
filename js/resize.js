@@ -19,4 +19,4 @@ function resize() {
 window.addEventListener('load',
     resize(), false);
 
-window.onresize = resize();
+window.addEventListener('resize', resize ,true)

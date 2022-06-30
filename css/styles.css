@@ -52,6 +52,7 @@ span {
     border-radius: 1rem;
     border-width: 3px;
     margin-bottom: 10px !important;
+    margin-top: 0;
 }
     #input:focus-visible, #input:focus-within {
         border-color: #004e8c;
@@ -87,7 +88,7 @@ p#translation {
 
     #input, span {
         font-size: 10vw;
-        height: 15vw;
+        height: 20vw;
         line-height: normal;
         width: calc(100% - 60px);
     }
@@ -110,7 +111,7 @@ p#translation {
         display: none;
     }
     #input, span {
-        height: 50%;
+        height: 40%;
         line-height: normal;
         text-size-adjust: auto;
         overflow: hidden;
