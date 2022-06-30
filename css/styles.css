@@ -44,7 +44,7 @@ p {
     color: #004e8c;
 }
 
-@media (max-width: 599) {
+@media (max-width: 599px) {
     h1 {
         font-size: 30pt;
     }
