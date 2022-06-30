@@ -22,6 +22,7 @@ h1 {
 }
 
 textarea {
+    font-family: Hanzi-Pinyin-Font;
     font-size: 8rem;
     resize: none;
     height: 11rem;
@@ -43,7 +44,31 @@ p {
     color: #004e8c;
 }
 
-@media (max-height: 13rem) {
+@media (max-width: 599) {
+    h1 {
+        font-size: 30pt;
+    }
+
+    h2 {
+        font-size: 17pt;
+    }
+
+    textarea {
+        font-size: 10vw;
+        height: 15vw;
+        line-height: normal;
+        width: calc(100% - 60px);
+    }
+    p {
+        font-size: 8vw;
+        line-height: normal;
+        height: 8vw;
+        margin: 0;
+        width: calc(100% - 80px);
+    }
+}
+
+@media (max-height: 500px) {
     * {
         margin: 0;
     }
@@ -56,14 +81,6 @@ p {
         line-height: 100%;
         text-size-adjust: auto;
         overflow: hidden;
-        width: calc(100% - 60px);
-        font-size: 15vw;
     }
-    p {
-        font-size: 8vw;
-        line-height:normal;
-        height: 8vw;
-        margin:0;
-        width: calc(100% - 80px);
-    }
+
 }
