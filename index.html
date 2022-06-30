@@ -5,6 +5,32 @@
     <title>learnChinese</title>
     <meta name="description" content="A simplified Chinese learning tool for English speakers. Built on MDBG Chinese-English Dictionary. Please support them here: www.mdbg.net/chinese/dictionary">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#004e8c" />
+    <style>
+        @font-face {
+            font-family: "Hanzi-Pinyin-Font";
+            src: url("./fonts/Hanzi-Pinyin-Font.top.tff")
+        }
+
+        @font-face {
+            font-family: "SegoeUI";
+            src: url("./fonts/segoeui.tff")
+        }
+
+        body {
+            font-family: Hanzi-Pinyin-Font, SegoeUI, Arial, sans-serif;
+        }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="images/152.jpg">
+    <meta name="theme-color" content="#004e8c" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#222222">
+    <meta name="apple-mobile-web-app-title" content="learnChinese">
+    <meta name="msapplication-TileImage" content="images/144.jpg">
+    <meta name="msapplication-TileColor" content="#222222">
 </head>
 <body>
     <script src="js/main.js"></script>
@@ -12,6 +38,7 @@
         <h1>learnChinese</h1>
         <h2>A simple language learning tool for English speakers learning Mandarin.</h2>
         <textarea placeholder="Type Chinese" onkeyup="fetchTranslation()"></textarea>
+        <p id="translation"></p>
     </section>
 </body>
 </html>

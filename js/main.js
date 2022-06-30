@@ -1,11 +1,45 @@
-async function fetchTranslation() {
-    text = document.querySelector("textarea").value;
-    translation = async () => {
-        response = await fetch(genQuery(text));
-        console.log(response)
-        console.log(response["text"])
-    }
+window.onload = () => {
+    'use strict';
 
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('./sw.js')
+    }
+}
+
+let controller = new AbortController();
+const queryInterval = 500;
+let timeout;
+
+function fetchTranslation() {
+
+    clearTimeout(timeout)
+
+    timeout = setTimeout(async function () {
+        text = document.querySelector("textarea").value;
+        console.log("try")
+        controller.abort()
+        controller = new AbortController();
+        response = fetch(genQuery(text), {
+            signal: controller.signal
+        })
+            .then(response => response.json())
+            .then(data => interpret(data))
+            .catch(error => {
+                document.getElementById('translation').innerHTML = "" // handle the error
+            });
+        console.log("sent fetch")
+    }, queryInterval);
+
+
+}
+
+var x;
+
+function interpret(data) {
+    console.log(data)
+    x = data
+    console.log(data['text'])
+    document.getElementById('translation').innerHTML = data['text']
 }
 
 function genQuery(text) {

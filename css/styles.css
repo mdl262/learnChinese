@@ -1,5 +1,9 @@
 ﻿* {
-    font-family: Arial;
+    color: #e1effa;
+}
+
+body {
+    background: #222222;
 }
 
 section {
@@ -18,7 +22,6 @@ h1 {
 }
 
 textarea {
-    font-family: Hanzi-Pinyin-Font;
     font-size: 8rem;
     resize: none;
     height: 11rem;
@@ -26,6 +29,41 @@ textarea {
     white-space: nowrap;
     line-height: 10rem;
     overflow-y: clip;
+    background: #7777;
+    border-color: #004e8c;
+    border-radius: 1rem;
+    border-width: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 10px !important;
 }
 
+p {
+    width: 100%;
+    color: #004e8c;
+}
 
+@media (max-height: 13rem) {
+    * {
+        margin: 0;
+    }
+
+    h1, h2 {
+        display: none;
+    }
+    textarea {
+        height: 50%;
+        line-height: 100%;
+        text-size-adjust: auto;
+        overflow: hidden;
+        width: calc(100% - 60px);
+        font-size: 15vw;
+    }
+    p {
+        font-size: 8vw;
+        line-height:normal;
+        height: 8vw;
+        margin:0;
+        width: calc(100% - 80px);
+    }
+}
