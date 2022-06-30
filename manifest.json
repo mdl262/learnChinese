@@ -2,7 +2,7 @@
   "name": "learnChinese",
   "short_name":"learnCN",
   "lang": "en-US",
-  "start_url": "/learnChinese.html",
+  "start_url": "/learnChinese/index.html",
   "display": "standalone",
   "background_color": "#222222",
   "theme_color": "#004e8c",

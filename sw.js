@@ -3,7 +3,7 @@
 var cacheName = 'learn-chinese-pwa';
 var filesToCache = [
     '/',
-    '/learnChinese.html',
+    '/index.html',
     '/css/style.css',
     '/js/main.js'
 ];
