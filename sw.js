@@ -5,7 +5,13 @@ var filesToCache = [
     '/',
     '/index.html',
     '/css/style.css',
-    '/js/main.js'
+    '/js/main.js',
+    '/js/enterkey.js',
+    '/js/resize.js',
+    '/fonts/Hanzi-Pinyin-Font.eot',
+    '/fonts/Hanzi-Pinyin-Font.top.ttf',
+    '/fonts/Hanzi-Pinyin-Font.woff',
+    '/fonts/Hanzi-Pinyin-Font.woff2',
 ];
 
 /* Start the service worker and cache all of the app's content */
